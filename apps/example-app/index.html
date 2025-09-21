@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykładowa Aplikacja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .feature {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Przykładowa Aplikacja</h1>
+        <p>To jest przykładowa aplikacja HTML do demonstracji panelu zarządzania.</p>
+        
+        <div class="feature">
+            <h3>✨ Funkcjonalności:</h3>
+            <ul>
+                <li>Responsywny design</li>
+                <li>Nowoczesny interfejs</li>
+                <li>Interaktywne elementy</li>
+                <li>Łatwa integracja z panelem</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <button onclick="showMessage()">Testuj funkcję</button>
+            <button onclick="changeTheme()">Zmień motyw</button>
+        </div>
+        
+        <div id="message" style="display: none; padding: 15px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; margin: 20px 0;">
+            <strong>Sukces!</strong> Aplikacja działa poprawnie.
+        </div>
+    </div>
+    
+    <script>
+        function showMessage() {
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = messageDiv.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        function changeTheme() {
+            const container = document.querySelector('.container');
+            const isLight = container.style.background !== 'rgb(52, 58, 64)';
+            
+            if (isLight) {
+                container.style.background = '#343a40';
+                container.style.color = 'white';
+                document.body.style.background = '#212529';
+            } else {
+                container.style.background = 'white';
+                container.style.color = '#333';
+                document.body.style.background = '#f5f5f5';
+            }
+        }
+    </script>
+</body>
+</html>

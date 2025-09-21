@@ -28,9 +28,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/panel-zarzadzania-html.git"
+    "url": "https://github.com/tomiwhite/myai-apps-panel.git"
   },
-  "homepage": "https://your-username.github.io/panel-zarzadzania-html",
+  "homepage": "https://tomiwhite.github.io/myai-apps-panel",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
