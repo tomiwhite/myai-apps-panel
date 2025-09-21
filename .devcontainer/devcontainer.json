@@ -1,0 +1,23 @@
+{
+  "name": "MyAI Apps Panel",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "npm install -g live-server",
+  "forwardPorts": [8080, 3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.live-server",
+        "ms-vscode.vscode-json",
+        "ms-vscode.vscode-html-css-support"
+      ],
+      "settings": {
+        "liveServer.settings.port": 8080,
+        "liveServer.settings.root": "/workspaces/myai-apps-panel"
+      }
+    }
+  }
+}
