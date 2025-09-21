@@ -1,0 +1,1 @@
+Ten folder przeznaczony jest na pliki statyczne (obrazy, ikony, itp.) używane przez aplikacje i dashboard.

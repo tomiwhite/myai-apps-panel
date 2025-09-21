@@ -1,0 +1,1 @@
+To jest główny panel (dashboard) do zarządzania i uruchamiania aplikacji AI. Pliki: app.js, index.html, style.css.

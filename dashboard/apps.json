@@ -1,0 +1,197 @@
+{
+  "apps": [
+    {
+      "id": "dokumentacja-projektow-myai",
+      "name": "Dokumentacja projektów myAI",
+      "description": "System zarządzania dokumentacją projektową z możliwością wyszukiwania i organizacji dokumentów",
+      "category": "project-docs",
+      "emoji": "📚",
+      "tags": ["dokumentacja", "projekty", "organizacja", "zarządzanie"],
+      "isActive": true,
+      "lastModified": "2025-09-21",
+      "path": "apps/project-docs/Dokumentacja-projektow-myAI/",
+      "features": [
+        "Przechowywanie dokumentacji projektowej",
+        "Wyszukiwanie w dokumentach",
+        "Organizacja według kategorii",
+        "Historia zmian"
+      ]
+    },
+    {
+      "id": "generator-hasel",
+      "name": "Generator Haseł",
+      "description": "Narzędzie do generowania bezpiecznych haseł",
+      "category": "tools",
+      "emoji": "🔐",
+      "tags": ["hasła", "bezpieczeństwo", "generator"],
+      "isActive": false,
+      "lastModified": "2025-09-21",
+      "path": "apps/tools/generator-hasel/",
+      "features": [
+        "Generowanie losowych haseł",
+        "Dostosowywalne kryteria",
+        "Różne poziomy złożoności"
+      ]
+    },
+    {
+      "id": "gra-memory",
+      "name": "Gra Memory",
+      "description": "Klasyczna gra w dopasowywanie par",
+      "category": "games",
+      "emoji": "🎮",
+      "tags": ["gra", "memory", "rozrywka"],
+      "isActive": true,
+      "lastModified": "2025-09-05",
+      "path": "apps/games/gra-memory/",
+      "features": [
+        "Różne poziomy trudności",
+        "System punktacji",
+        "Statystyki gier"
+      ]
+    },
+    {
+      "id": "kalkulator-bmi",
+      "name": "Kalkulator BMI",
+      "description": "Prosty kalkulator wskaźnika masy ciała",
+      "category": "tools",
+      "emoji": "🧮",
+      "tags": ["kalkulator", "bmi", "zdrowie"],
+      "isActive": true,
+      "lastModified": "2025-09-15",
+      "path": "apps/tools/kalkulator-bmi/",
+      "features": [
+        "Obliczanie BMI",
+        "Interpretacja wyników",
+        "Historia pomiarów"
+      ]
+    },
+    {
+      "id": "konwerter-walut",
+      "name": "Konwerter Walut",
+      "description": "Przelicznik walut z aktualnym kursem",
+      "category": "tools",
+      "emoji": "💱",
+      "tags": ["waluta", "konwerter", "finanse"],
+      "isActive": false,
+      "lastModified": "2025-08-20",
+      "path": "apps/tools/konwerter-walut/",
+      "features": [
+        "Aktualne kursy walut",
+        "Wiele walut",
+        "Historia kursów"
+      ]
+    },
+    {
+      "id": "lista-zadan",
+      "name": "Lista Zadań",
+      "description": "Aplikacja do zarządzania zadaniami",
+      "category": "tools",
+      "emoji": "📝",
+      "tags": ["zadania", "produktywność", "organizacja"],
+      "isActive": true,
+      "lastModified": "2025-09-10",
+      "path": "apps/tools/lista-zadan/",
+      "features": [
+        "Dodawanie zadań",
+        "Kategoryzacja",
+        "Przypomnienia"
+      ]
+    },
+      {
+        "id": "document-to-task",
+        "name": "DocumentToTaskApp",
+        "description": "Generowanie zadań z dokumentu tekstowego (AI)",
+        "category": "tools",
+        "emoji": "🗒️",
+        "tags": ["zadania", "dokument", "ai", "generator"],
+        "isActive": true,
+        "lastModified": "2025-09-21",
+        "path": "apps/document-to-task/",
+        "features": [
+          "Wklejanie treści dokumentu",
+          "Automatyczne generowanie zadań",
+          "Kopiowanie listy zadań"
+        ]
+      },
+    {
+      "id": "prezentacja-ai",
+      "name": "Prezentacja AI",
+      "description": "Slajdy o zastosowaniu AI w biznesie",
+      "category": "presentations",
+      "emoji": "📊",
+      "tags": ["prezentacja", "ai", "biznes"],
+      "isActive": true,
+      "lastModified": "2025-09-12",
+      "path": "apps/presentations/prezentacja-ai/",
+      "features": [
+        "Interaktywne slajdy",
+        "Animacje",
+        "Eksport do PDF"
+      ]
+    },
+    {
+      "id": "quiz-javascript",
+      "name": "Quiz JavaScript",
+      "description": "Interaktywny quiz o programowaniu",
+      "category": "games",
+      "emoji": "❓",
+      "tags": ["quiz", "javascript", "edukacja"],
+      "isActive": true,
+      "lastModified": "2025-09-01",
+      "path": "apps/games/quiz-javascript/",
+      "features": [
+        "Pytania wielokrotnego wyboru",
+        "System punktacji",
+        "Wyjaśnienia odpowiedzi"
+      ]
+    },
+    {
+      "id": "wykres-sprzedazy",
+      "name": "Wykres Sprzedaży",
+      "description": "Dashboard z wykresami sprzedaży",
+      "category": "presentations",
+      "emoji": "📈",
+      "tags": ["wykres", "sprzedaż", "dashboard"],
+      "isActive": false,
+      "lastModified": "2025-08-15",
+      "path": "apps/presentations/wykres-sprzedazy/",
+      "features": [
+        "Wykresy interaktywne",
+        "Analiza danych",
+        "Eksport raportów"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "tools",
+      "name": "Narzędzia",
+      "emoji": "🔧",
+      "description": "Praktyczne narzędzia i kalkulatory"
+    },
+    {
+      "id": "games",
+      "name": "Gry",
+      "emoji": "🎮",
+      "description": "Gry i rozrywka"
+    },
+    {
+      "id": "presentations",
+      "name": "Prezentacje",
+      "emoji": "📊",
+      "description": "Prezentacje i dashboardy"
+    },
+    {
+      "id": "project-docs",
+      "name": "Dokumentacja Projektów",
+      "emoji": "📚",
+      "description": "System zarządzania dokumentacją projektową"
+    }
+  ],
+  "settings": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-21",
+    "defaultView": "grid",
+    "itemsPerPage": 12
+  }
+}

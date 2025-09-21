@@ -1,0 +1,8 @@
+{
+  "name": "DocumentToTaskApp",
+  "title": "Generowanie zadań z dokumentu",
+  "description": "Aplikacja AI do automatycznego generowania listy zadań na podstawie treści dokumentu. Wklej tekst, kliknij 'Generuj zadania' i skopiuj gotową listę!",
+  "main": "DocumentToTaskApp.js",
+  "author": "Twoje Imię lub Zespół",
+  "language": "pl"
+}

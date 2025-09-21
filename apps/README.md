@@ -1,0 +1,1 @@
+Tutaj umieszczaj podfoldery z aplikacjami AI (np. claude, gemini, inne). Każda aplikacja powinna mieć własny folder.

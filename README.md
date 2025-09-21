@@ -1,3 +1,48 @@
+# Panel AI Apps – Automatyzacja
+
+## Szybki start
+
+1. **Tworzenie nowej aplikacji AI**
+
+  Użyj skryptu:
+  ```bash
+  python scripts/create_category_and_app.py <kategoria> <nazwa_aplikacji> "Tytuł aplikacji" "Opis aplikacji"
+  ```
+  Przykład:
+  ```bash
+  python scripts/create_category_and_app.py narzędzia kalkulator-bmi "Kalkulator BMI" "Prosty kalkulator wskaźnika masy ciała."
+  ```
+  - Skrypt automatycznie utworzy folder kategorii (jeśli nie istnieje), skopiuje template, zaktualizuje meta.json.
+
+2. **Aktualizacja listy aplikacji w panelu**
+
+  Po dodaniu nowych aplikacji uruchom:
+  ```bash
+  python scripts/generate_apps_json.py
+  ```
+  - Skrypt przeskanuje wszystkie aplikacje i wygeneruje aktualny plik `dashboard/apps.json`.
+
+3. **Struktura katalogów**
+
+  - `apps/<kategoria>/<nazwa_aplikacji>/` – foldery aplikacji AI
+  - `app_template/` – szablon do kopiowania
+  - `dashboard/apps.json` – lista aplikacji ładowana przez panel
+  - `scripts/` – narzędzia automatyzujące
+
+4. **Meta-dane aplikacji**
+
+  Każda aplikacja posiada plik `meta.json` z polami:
+  - `title`, `description`, `category`, `status`, `version`, `last_modified`, `thumbnail`
+
+5. **Dodawanie nowych kategorii**
+
+  Kategorie tworzą się automatycznie przy dodawaniu aplikacji przez skrypt.
+
+---
+
+## Dalsza automatyzacja
+- Możesz rozbudowywać template, skrypty i panel według własnych potrzeb.
+- Po każdej zmianie uruchom ponownie `generate_apps_json.py`, by panel widział nowe aplikacje.
 # Panel Zarządzania Aplikacjami HTML
 
 ## 📋 Opis

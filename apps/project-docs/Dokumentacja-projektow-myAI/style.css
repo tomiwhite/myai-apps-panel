@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; background: #f8f8f8; color: #222; margin: 0; padding: 0; }
+main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; }
+h1 { font-size: 2rem; margin-bottom: 1rem; }
+#docs-list { margin-bottom: 2rem; }
+#docs-list button { margin-right: 1rem; padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid #ccc; background: #eee; cursor: pointer; }
+#docs-list button:hover { background: #ddd; }
+pre { background: #f4f4f4; padding: 1rem; border-radius: 6px; overflow-x: auto; }
