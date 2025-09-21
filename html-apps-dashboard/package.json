@@ -1,0 +1,38 @@
+{
+  "name": "panel-zarzadzania-aplikacjami-html",
+  "version": "1.0.0",
+  "description": "Centralny panel zarządzania aplikacjami HTML z integracją AI i GitHub",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -c-1 -o -p 3000",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "build": "echo 'Static HTML app - no build step required'",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "gh-pages": "^6.0.0"
+  },
+  "keywords": [
+    "dashboard", 
+    "app-management", 
+    "html", 
+    "css", 
+    "javascript",
+    "ai-compatible",
+    "dyad-ready",
+    "github-integration"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/panel-zarzadzania-html.git"
+  },
+  "homepage": "https://your-username.github.io/panel-zarzadzania-html",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Aplikacje HTML - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">📱 Moje Aplikacje HTML</h1>
+                <button class="btn btn--primary" id="addAppBtn">
+                    ➕ Dodaj aplikację
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <div class="dashboard-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Search -->
+                <div class="search-section">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="🔍 Wyszukaj aplikację...">
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-section">
+                    <h3>Filtry</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                        <button class="filter-btn" data-filter="aktywna">Aktywne</button>
+                        <button class="filter-btn" data-filter="nieaktywna">Nieaktywne</button>
+                        <button class="filter-btn" data-filter="recent">Ostatnie</button>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="categories-section">
+                    <h3>Kategorie</h3>
+                    <div class="category-buttons">
+                        <button class="category-btn active" data-category="all">Wszystkie</button>
+                        <button class="category-btn" data-category="narzędzia">🔧 Narzędzia</button>
+                        <button class="category-btn" data-category="gry">🎮 Gry</button>
+                        <button class="category-btn" data-category="prezentacje">📊 Prezentacje</button>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats-section">
+                    <h3>Statystyki</h3>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalApps">0</span>
+                            <span class="stat-label">Wszystkich aplikacji</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="activeApps">0</span>
+                            <span class="stat-label">Aktywnych</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="inactiveApps">0</span>
+                            <span class="stat-label">Nieaktywnych</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export -->
+                <div class="export-section">
+                    <button class="btn btn--outline btn--full-width" id="exportBtn">
+                        📤 Eksportuj do JSON
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Sort Controls -->
+                <div class="controls-bar">
+                    <div class="sort-controls">
+                        <label for="sortSelect">Sortuj:</label>
+                        <select class="form-control" id="sortSelect">
+                            <option value="name">Alfabetycznie</option>
+                            <option value="date">Data modyfikacji</option>
+                            <option value="category">Kategoria</option>
+                        </select>
+                    </div>
+                    <div class="view-controls">
+                        <span id="resultsCount">0 aplikacji</span>
+                    </div>
+                </div>
+
+                <!-- Apps Grid -->
+                <div class="apps-grid" id="appsGrid">
+                    <!-- App cards will be dynamically generated here -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state hidden" id="emptyState">
+                    <div class="empty-state-content">
+                        <div class="empty-state-icon">📱</div>
+                        <h3>Brak aplikacji</h3>
+                        <p>Nie znaleziono aplikacji spełniających kryteria wyszukiwania.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Add App Modal -->
+    <div class="modal hidden" id="addAppModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Dodaj nową aplikację</h2>
+                <button class="modal-close" id="closeModal">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="addAppForm">
+                    <div class="form-group">
+                        <label class="form-label" for="appName">Nazwa aplikacji</label>
+                        <input type="text" class="form-control" id="appName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="appDescription">Opis</label>
+                        <textarea class="form-control" id="appDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="appCategory">Kategoria</label>
+                        <select class="form-control" id="appCategory" required>
+                            <option value="">Wybierz kategorię</option>
+                            <option value="narzędzia">Narzędzia</option>
+                            <option value="gry">Gry</option>
+                            <option value="prezentacje">Prezentacje</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="appUrl">URL/Ścieżka do plików HTML</label>
+                        <input type="url" class="form-control" id="appUrl" placeholder="/apps/moja-aplikacja/index.html" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="appThumbnail">Nazwa pliku miniaturki</label>
+                        <input type="text" class="form-control" id="appThumbnail" placeholder="thumbnail.png">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn--outline" id="cancelBtn">Anuluj</button>
+                <button type="submit" class="btn btn--primary" form="addAppForm">Dodaj aplikację</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit App Modal -->
+    <div class="modal hidden" id="editAppModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edytuj aplikację</h2>
+                <button class="modal-close" id="closeEditModal">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="editAppForm">
+                    <input type="hidden" id="editAppId">
+                    <div class="form-group">
+                        <label class="form-label" for="editAppName">Nazwa aplikacji</label>
+                        <input type="text" class="form-control" id="editAppName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="editAppDescription">Opis</label>
+                        <textarea class="form-control" id="editAppDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="editAppCategory">Kategoria</label>
+                        <select class="form-control" id="editAppCategory" required>
+                            <option value="narzędzia">Narzędzia</option>
+                            <option value="gry">Gry</option>
+                            <option value="prezentacje">Prezentacje</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="editAppUrl">URL/Ścieżka do plików HTML</label>
+                        <input type="url" class="form-control" id="editAppUrl" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="editAppThumbnail">Nazwa pliku miniaturki</label>
+                        <input type="text" class="form-control" id="editAppThumbnail">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="editAppStatus">Status</label>
+                        <select class="form-control" id="editAppStatus" required>
+                            <option value="aktywna">Aktywna</option>
+                            <option value="nieaktywna">Nieaktywna</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn--outline" id="cancelEditBtn">Anuluj</button>
+                <button type="submit" class="btn btn--primary" form="editAppForm">Zapisz zmiany</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
