@@ -1,0 +1,27 @@
+{
+  "apps": [
+    {
+      "id": "example-app",
+      "name": "Przykładowa Aplikacja",
+      "description": "Przykład aplikacji HTML do demonstracji panelu",
+      "path": "./example-app/index.html",
+      "category": "demo",
+      "status": "active",
+      "author": "Admin",
+      "created": "2025-09-21",
+      "modified": "2025-09-21",
+      "tags": ["demo", "przykład", "html"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "demo",
+      "name": "Demo",
+      "description": "Aplikacje demonstracyjne"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-21"
+  }
+}
