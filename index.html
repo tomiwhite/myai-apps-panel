@@ -45,12 +45,12 @@
                 <!-- Categories -->
                 <div class="categories-section">
                     <h3>Kategorie</h3>
-                    <div class="category-buttons" id="categoryButtons">
+                    <div class="category-buttons">
                         <button class="category-btn active" data-category="all">Wszystkie</button>
+                        <button class="category-btn" data-category="narzędzia">🔧 Narzędzia</button>
+                        <button class="category-btn" data-category="gry">🎮 Gry</button>
+                        <button class="category-btn" data-category="prezentacje">📊 Prezentacje</button>
                     </div>
-                    <button class="btn btn--outline btn--small" id="addCategoryBtn" style="margin-top: 10px; width: 100%;">
-                        ➕ Dodaj kategorię
-                    </button>
                 </div>
 
                 <!-- Statistics -->
@@ -136,6 +136,9 @@
                         <label class="form-label" for="appCategory">Kategoria</label>
                         <select class="form-control" id="appCategory" required>
                             <option value="">Wybierz kategorię</option>
+                            <option value="narzędzia">Narzędzia</option>
+                            <option value="gry">Gry</option>
+                            <option value="prezentacje">Prezentacje</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -177,6 +180,9 @@
                     <div class="form-group">
                         <label class="form-label" for="editAppCategory">Kategoria</label>
                         <select class="form-control" id="editAppCategory" required>
+                            <option value="narzędzia">Narzędzia</option>
+                            <option value="gry">Gry</option>
+                            <option value="prezentacje">Prezentacje</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -199,33 +205,6 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn--outline" id="cancelEditBtn">Anuluj</button>
                 <button type="submit" class="btn btn--primary" form="editAppForm">Zapisz zmiany</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Category Modal -->
-    <div class="modal hidden" id="addCategoryModal">
-        <div class="modal-backdrop"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Dodaj nową kategorię</h2>
-                <button class="modal-close" id="closeCategoryModal">✕</button>
-            </div>
-            <div class="modal-body">
-                <form id="addCategoryForm">
-                    <div class="form-group">
-                        <label class="form-label" for="categoryName">Nazwa kategorii</label>
-                        <input type="text" class="form-control" id="categoryName" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="categoryIcon">Ikona (opcjonalne)</label>
-                        <input type="text" class="form-control" id="categoryIcon" placeholder="🔧" maxlength="2">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn--outline" id="cancelCategoryBtn">Anuluj</button>
-                <button type="submit" class="btn btn--primary" form="addCategoryForm">Dodaj kategorię</button>
             </div>
         </div>
     </div>
